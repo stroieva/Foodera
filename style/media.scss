@@ -1,0 +1,311 @@
+@import "style";
+
+@media (max-width: 1160px) {
+
+    // section about
+
+    .about {
+        &__gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gallery {
+        &__content {
+            max-width: 100%;
+        }
+    }
+
+    .image-about {
+        justify-self: center;
+    }
+
+    // section faq
+
+    .column-faq {
+
+        &__item {
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    // header
+
+    .header {
+
+        &__menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 115px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.8s;
+        }
+    }
+
+    .menu {
+
+        &__list {
+            flex-direction: column;
+            background-color: $background-color;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        &__item {
+            margin-right: 0;
+        }
+
+        &__link {
+            color: $text-color;
+            font-size: 30px;
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .burger {
+        display: block;
+
+        &__line {
+            transition: 0.8s;
+        }
+
+        .menu--active &__line {
+
+            &:nth-child(1) {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(3) {
+                transform: scale(0);
+            }
+        }
+    }
+
+    // section about
+
+    .about {
+        &__block {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            max-width: 580px;
+            order: 2;
+        }
+    }
+
+    .image-about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        order: 1;
+
+        &__picture {
+            &--1 {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    // section progress
+
+    .progress {
+        padding: 80px 0;
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__block {
+            flex: 0 1 50%;
+        }
+    }
+
+    // section contact 
+
+    .contact {
+        &__title {
+            padding-bottom: 10px;
+        }
+
+        &__text {
+            padding-bottom: 10px;
+        }
+    }
+
+    .form-contact {
+        flex-direction: column;
+        padding-bottom: 10px;
+
+        &__input {
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+
+    .title {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    // main
+
+    .main {
+
+        &__about,
+        &__our-story,
+        &__explore-foods,
+        &__contact,
+        &__testimonials,
+        &__faq {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &__footer {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    // section banner
+
+    .banner {
+        position: relative;
+        text-align: center;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 1;
+            background-color: rgba($color: rgb(251, 235, 235), $alpha: 0.4);
+        }
+
+        &__container {
+            padding-top: 280px;
+        }
+
+        &__title {
+            max-width: none;
+            padding-bottom: 20px;
+        }
+
+        &__dascription {
+            max-width: none;
+        }
+    }
+
+    // section progress
+
+    .progress {
+        padding: 40px 0;
+
+        &__block {
+            flex: 0 1 100%;
+        }
+    }
+
+    // section testimonials
+
+    .swiper-wrapper {
+        margin-bottom: 60px;
+    }
+
+    .swiper-slide {
+        // min-height: 400px;
+
+        &__text {
+            max-width: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+    }
+
+    // modal 
+
+    .form-modal {
+        &__input-info {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    // section banner
+
+    .banner {
+
+        &__container {
+            padding-top: 200px;
+        }
+
+        &__description {
+            font-size: 18px;
+        }
+    }
+
+    // section about
+
+    .about {
+
+        &__content {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    // parallax
+
+    .parallax {
+        &__text {
+            text-align: center;
+        }
+    }
+}
